@@ -1,0 +1,8 @@
+= GraphLite
+
+Rails gem for interacting with the Facebook API. This gem is intended
+to be a lightweight wrapper that allows you to quickly and easily
+interact with the Facebook API. It is not intended to be a full
+object wrapper.
+
+This is a work in progress. Use at your own risk.
