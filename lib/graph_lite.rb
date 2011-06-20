@@ -1,17 +1,12 @@
+require 'uri'
+require 'typhoeus'
+require 'json'
+require 'graph_lite/helpers'
+require 'graph_lite/app'
+
 module GraphLite
+  
   class API
-    # Access app token
-    def self.get_app_access_token
-      uri = URI.encode(
-        "https://graph.facebook.com/oauth/access_token?" +
-        "client_id=#{FB_APP_ID}&client_secret=#{FB_APP_SECRET}&" +
-        "grant_type=client_credentials"
-      )
-      response = Typhoeus::Request.get(uri,
-        :disable_ssl_peer_verification => true)
-      response.body =~ /^access_token=(\S+)$/
-      $1
-    end
     
     # Facebook Helper methods
     def self.init(access_token)

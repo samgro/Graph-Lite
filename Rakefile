@@ -8,7 +8,8 @@ Echoe.new('graph_lite', '0.1.0') do |p|
   p.author         = "Sam Grossberg"
   p.email          = "sam@outdrsy.com"
   p.ignore_pattern = ["tmp/*", "script/*"]
-  p.development_dependencies = []
+  p.runtime_dependencies      = ['typhoeus', 'json']
+  p.development_dependencies  = []
 end
 
 Dir["#{File.dirname(__FILE__)}/tasks/*.rake"].sort.each { |ext| load ext }
