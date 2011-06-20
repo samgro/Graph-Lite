@@ -5,7 +5,10 @@ module GraphLite
     def self.post
     end
     
-    def self.get
+    # Send a GET request, return decoded object from JSON
+    def self.get(path)
+      response = Typhoeus::Request.get(url(path), :disable_ssl_peer_verification => true)
+      result = JSON.parse(response.body)
     end
     
     def self.url(path, params = {})

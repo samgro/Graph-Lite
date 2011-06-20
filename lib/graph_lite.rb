@@ -7,7 +7,6 @@ require 'graph_lite/app'
 require "graph_lite/version"
 
 module GraphLite
-  
   class API
     
     # Facebook Helper methods

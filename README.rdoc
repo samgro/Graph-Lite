@@ -6,3 +6,7 @@ interact with the Facebook API. It is not intended to be a full
 object wrapper.
 
 This is a work in progress. Use at your own risk.
+
+= Tests
+Tests are written using RSpec and provide good sample code. They hit the Facebook API
+directly and use example graph objects from the Facebook documentation.

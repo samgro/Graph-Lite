@@ -6,7 +6,14 @@ describe GraphLite::Helpers do
   end
   
   describe "get" do
-    it "should get a valid facebook address"
+    it "should get a public graph object without access token" do
+      graph_object = GraphLite::Helpers.get('/cocacola')
+      graph_object['id'].should == "40796308305"
+    end
+    
+    it "should get an object with params"
+    
+    it "should return helpful error messages"
   end
   
   describe "url" do
